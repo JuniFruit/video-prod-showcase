@@ -1,0 +1,11 @@
+import Layout from '@/modules/Layout/Layout'
+import '@/styles/globals.scss'
+import type { AppProps } from 'next/app'
+
+export default function App({ Component, pageProps }: AppProps) {
+	return (
+		<Layout title='My portfolio'>
+			<Component {...pageProps} />
+		</Layout>
+	)
+}

@@ -1,0 +1,14 @@
+.container {
+	@apply flex h-12 items-center justify-between bg-main-800 py-1.5 px-2 opacity-80;
+
+	.link_container {
+		@apply p-2;
+		margin-right: 2%;
+		@screen md {
+			margin-right: 10%;
+		}
+		> ul {
+			@apply flex gap-2;
+		}
+	}
+}

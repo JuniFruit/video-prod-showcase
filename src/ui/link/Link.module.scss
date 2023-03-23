@@ -1,0 +1,14 @@
+.nav_link {
+	@apply text-white font-bold transition-all duration-200;
+
+	@media (hover: hover) {
+		@apply hover:opacity-70;
+	}
+	&:focus-visible {
+		@apply text-complimentary-600;
+	}
+}
+
+.nav_active {
+	@apply text-complimentary-500;
+}
