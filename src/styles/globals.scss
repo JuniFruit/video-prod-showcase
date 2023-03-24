@@ -10,6 +10,10 @@
 	padding: 0;
 }
 
+svg {
+	@apply h-full w-full;
+}
+
 :root {
 	--main-900: #151515;
 	--main-800: #1f1f1f;

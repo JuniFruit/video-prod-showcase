@@ -1,0 +1,16 @@
+@import '../../styles/mixins';
+
+.skills_container {
+	/* @apply overflow-y-scroll; */
+	@include pos-circle($item-count: 6, $container-size: 10);
+	.icon {
+		@apply text-white w-10 h-10 transition-all duration-200;
+
+		@media (hover: hover) {
+			@apply hover:text-complimentary-200;
+			&:hover {
+				scale: 1.05;
+			}
+		}
+	}
+}

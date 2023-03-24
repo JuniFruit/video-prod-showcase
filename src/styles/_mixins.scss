@@ -1,0 +1,32 @@
+@mixin pos-circle($item-count, $container-size) {
+	position: relative;
+	width: #{$container-size}rem;
+	height: #{$container-size}rem;
+
+	> * {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		$angle: (360 / $item-count);
+		$rot: 0;
+
+		@for $i from 1 through $item-count {
+			&:nth-child(#{$i}) {
+				$rot: $rot + $angle;
+				transform: rotate($rot * 1deg)
+					translate(#{$container-size / 2}rem)
+					rotate($rot * -1deg);
+			}
+			&:nth-child(#{$i})::after {
+				content: '';
+				position: absolute;
+				height: #{$container-size / ($container-size + 5.5)}rem;
+				width: #{$container-size / ($container-size + 5.5)}rem;
+				border-radius: 9999px;
+				top: 0;
+				left: 0;
+				background-color: transparent;
+			}
+		}
+	}
+}
